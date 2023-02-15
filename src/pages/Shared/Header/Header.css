@@ -1,0 +1,19 @@
+.header {
+    position:absolute;
+}
+
+.login-btn{
+    background-color: #FF6E40;
+    color: #fff !important;
+    border-radius: 5px;
+    padding: 6px 24px !important;
+}
+
+
+/* responsive mobile devices */
+@media screen and (max-width: 576px) {
+    .header{
+        position:relative;
+        background-color: #89ddf4;
+    }
+}

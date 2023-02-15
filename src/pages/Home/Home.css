@@ -1,0 +1,22 @@
+.background-section {
+    padding-top: 250px;
+    padding-bottom: 350px
+}
+
+
+/* responsive tablet device*/
+@media screen and (min-width: 577px) and (max-width: 991px) {
+    .background-section {
+        padding-top: 250px;
+        padding-bottom: 200px;
+    }
+}
+
+
+/* responsive mobile devices */
+@media screen and (max-width: 576px) {
+   .background-section {
+    padding-top: 20px;
+    padding-bottom: 70px;
+   }
+}
