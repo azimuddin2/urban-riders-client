@@ -9,11 +9,43 @@
     padding: 6px 24px !important;
 }
 
+.nav-items a{
+    font-weight: 500;
+    color: #2D2D2D;
+    margin-left: 20px;
+}
+
 
 /* responsive mobile devices */
 @media screen and (max-width: 576px) {
     .header{
         position:relative;
         background-color: #89ddf4;
+    }
+
+    .nav-items a{
+        margin-left: 0;
+    }
+
+    .nav-items {
+        margin-top: 10px;
+    }
+
+    .nav-items a:hover {
+        background-color: #aee8f8;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .login-btn:hover{
+        background-color: #FF6E40 !important;
+    }
+
+    .login-btn{
+        background-color: #FF6E40;
+        width: 100%;
+        text-align: center;
+        padding: 6px 0 !important;
     }
 }
