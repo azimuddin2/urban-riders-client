@@ -1,0 +1,74 @@
+.form-container {
+    padding-top: 150px;
+    padding-bottom: 150px
+}
+
+.form-title{
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form {
+    width: 570px;
+    margin: auto;
+    padding: 40px 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ABABAB;
+    border-radius: 4px;
+}
+
+.form-btn {
+    border: none;
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: #FF6E40;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.forgot-password {
+    color: #FF6E40;
+    font-weight: 500;
+}
+
+.link {
+    color: #FF6E40;
+}
+
+/* input[type=checkbox] {
+    accent-color: #FF6E40;
+} */
+
+.show-password {
+    position: absolute;
+    color: #2A414F;
+    cursor: pointer;
+    margin-left: 436px;
+    margin-top: -40px;
+}
+
+
+/* responsive mobile devices */
+@media screen and (max-width: 576px) {
+    .form-container {
+        padding-top: 50px;
+        padding-bottom: 50px
+    }
+    
+    .form {
+        width: 92%;
+        margin: auto;
+        padding: 20px 16px;
+    }
+    
+    .show-password {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        margin-top: -38px;
+    }
+}
