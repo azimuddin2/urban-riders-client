@@ -1,13 +1,12 @@
 import React from 'react';
-import notFound from '../../../assets/images/not-found.gif';
+import './NotFound.css';
+import notFound from '../../assets/images/not-found.gif';
 import { FaHome } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import './NotFound.css';
 import { Zoom } from 'react-reveal';
 
 const NotFound = () => {
     const navigate = useNavigate();
-
     return (
         <Zoom>
             <div className='text-center my-5'>
