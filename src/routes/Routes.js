@@ -4,6 +4,7 @@ import Contact from "../pages/Contact/Contact";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import NotFound from "../pages/Shared/NotFound/NotFound";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <NotFound></NotFound>
     }
 ]);
 
