@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Fade } from 'react-reveal';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -50,6 +51,7 @@ const Register = () => {
                     </form>
                     <p className='text-center mt-4 fw-semibold'>Already have an account? <Link to="/login" className='link'>Login</Link></p>
                 </div>
+                <SocialLogin></SocialLogin>
             </Fade>
         </div>
     );
