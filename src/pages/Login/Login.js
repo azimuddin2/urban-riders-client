@@ -1,25 +1,51 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
 import { Fade } from 'react-reveal';
 import './Login.css';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import { toast } from 'react-hot-toast';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const { signIn } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                form.reset();
+                navigate(from, { replace: true });
+            })
+            .catch(error => {
+                toast.error(error.message);
+            })
+    };
 
     return (
         <div className='form-container'>
             <Fade bottom>
                 <div className='form'>
                     <h2 className='form-title'>Login</h2>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="form-floating mb-3">
-                            <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" required />
+                            <input name='email' type="email" className="form-control" id="floatingInput" placeholder="name@example.com" required />
                             <label for="floatingInput">Email</label>
                         </div>
                         <div className="form-floating mb-4">
                             <input
+                                name='password'
                                 type={showPassword ? "text" : "password"} className="form-control"
                                 id="floatingPassword"
                                 placeholder="Password"

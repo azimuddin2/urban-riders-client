@@ -1,28 +1,50 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { toast } from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Fade } from 'react-reveal';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const { createUser } = useContext(AuthContext);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                form.reset();
+            })
+            .catch(error => {
+                toast.error(error.message);
+            })
+    }
 
     return (
         <div className='form-container'>
             <Fade bottom>
                 <div className='form'>
                     <h2 className='form-title'>Create an account</h2>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="form-floating mb-3">
-                            <input type="text" className="form-control" id="floatingName" placeholder="Name" required />
+                            <input name='name' type="text" className="form-control" id="floatingName" placeholder="Name" required />
                             <label for="floatingName">Name</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input type="email" className="form-control" id="floatingEmail" placeholder="name@example.com" required />
+                            <input name='email' type="email" className="form-control" id="floatingEmail" placeholder="name@example.com" required />
                             <label for="floatingEmail">Email</label>
                         </div>
                         <div className="form-floating mb-4">
                             <input
+                                name='password'
                                 type={showPassword ? "text" : "password"} className="form-control"
                                 id="floatingPassword"
                                 placeholder="Password"
