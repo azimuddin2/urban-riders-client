@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/Urban Riders.png'
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import './Header.css';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => {
+                toast.error(error.message);
+            })
+    };
+
     return (
         <div className='container p-0'>
             <div className='container header py-3'>
@@ -20,7 +32,15 @@ const Header = () => {
                                 <Nav.Link as={Link} to='/destination'>Destination</Nav.Link>
                                 <Nav.Link as={Link} to='/Services'>Services</Nav.Link>
                                 <Nav.Link as={Link} to='/contact'>Contact</Nav.Link>
-                                <Nav.Link className='login-btn' as={Link} to='/login'>Login</Nav.Link>
+                                {
+                                    user?.uid ?
+                                        <>
+                                            <Nav.Link className='fw-bolder'>{user?.displayName}</Nav.Link>
+                                            <button onClick={handleLogOut} className='fw-semibold login-btn'>Logout</button>
+                                        </>
+                                        :
+                                        <Nav.Link className='login-btn' as={Link} to='/login'>Login</Nav.Link>
+                                }
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
