@@ -6,6 +6,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import NotFound from "../pages/NotFound/NotFound";
 import Register from "../pages/Register/Register";
+import RiderService from "../pages/RiderService/RiderService";
 import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -17,7 +18,14 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader: () => {
-                    return fetch('services.json')
+                    return fetch('http://localhost:5000/services')
+                }
+            },
+            {
+                path: '/rider-service/:id',
+                element: <RiderService></RiderService>,
+                loader: ({ params }) => {
+                    return fetch(`http://localhost:5000/service/${params.id}`)
                 }
             },
             {
