@@ -49,7 +49,7 @@ const RiderService = () => {
                             </div>
                         </div>
 
-                        <div className='search-part'>
+                        {/* <div className='search-part'>
                             <form>
                                 <div class="mb-2">
                                     <label for="exampleInputFrom" class="form-label fw-semibold">Pick From</label>
@@ -61,7 +61,7 @@ const RiderService = () => {
                                 </div>
                                 <button type="submit" class="search-btn"><BiSearch className='fs-4'></BiSearch> Search</button>
                             </form>
-                        </div>
+                        </div> */}
                     </div>
                     {/* Google Map */}
                     <div className='d-grid col-lg-8 col-sm-12'>

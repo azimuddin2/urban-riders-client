@@ -11,7 +11,8 @@ const Service = ({ service }) => {
         <div className='col-sm-12 col-md-6 col-lg-3 g-4'>
             <Zoom bottom>
                 <div
-                    onClick={() => navigate(`/rider-service/${_id}`)}
+                    onClick={() => navigate(`/search/${_id}`)}
+                    // onClick={() => navigate('/search')}
                     className='service bg-white text-center px-5 pt-5 pb-3 rounded h-100'
                 >
                     <img className='w-100' src={image} alt="" />
