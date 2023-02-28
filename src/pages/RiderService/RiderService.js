@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { IoAdd, IoRemove } from 'react-icons/io5';
-import { BiSearch } from 'react-icons/bi';
 import peopleImage from '../../assets/images/people-icon.png';
 import map from '../../assets/images/Map.png';
 import './RiderService.css';
@@ -13,19 +12,22 @@ const RiderService = () => {
     const [quantity, SetQuantity] = useState(1);
     const [newPrice, setPrice] = useState(price);
 
-    const handleAddQuantity = () => {
-        // const newQuantity = quantity + 1;
-        // const newPrice = price * newQuantity;
+    const handleAddUser = () => {
+        const newQuantity = quantity + 1;
+        const newPrice = price * newQuantity;
 
-        // SetQuantity(newQuantity);
-        // setPrice(newPrice);
+        SetQuantity(newQuantity);
+        setPrice(newPrice);
     };
 
-    const handleDeleteQuantity = () => {
-        // const newQuantity = quantity - 1;
-        // if (newQuantity >= 1) {
-        //     SetQuantity(newQuantity);
-        // }
+    const handleDeleteUser = () => {
+        const newQuantity = quantity - 1;
+        const newPrice = price * newQuantity;
+
+        if (newQuantity >= 1) {
+            SetQuantity(newQuantity);
+            setPrice(newPrice);
+        }
     };
 
     return (
@@ -42,26 +44,12 @@ const RiderService = () => {
                                 </div>
                             </div>
                             <div className='d-flex align-items-center'>
-                                <button className='click-btn' onClick={handleDeleteQuantity}><IoRemove></IoRemove></button>
+                                <button className='click-btn' onClick={handleDeleteUser}><IoRemove></IoRemove></button>
                                 <img className='people-image' src={peopleImage} alt="" />
                                 <h5 className='m-0 quantity'>{quantity}</h5>
-                                <button className='click-btn' onClick={handleAddQuantity}><IoAdd></IoAdd></button>
+                                <button className='click-btn' onClick={handleAddUser}><IoAdd></IoAdd></button>
                             </div>
                         </div>
-
-                        {/* <div className='search-part'>
-                            <form>
-                                <div class="mb-2">
-                                    <label for="exampleInputFrom" class="form-label fw-semibold">Pick From</label>
-                                    <input name='from' type="text" class="form-control" id="exampleInputFrom" required/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputTo" class="form-label fw-semibold">Pick To</label>
-                                    <input name='to' type="text" class="form-control" id="exampleInputTo" required/>
-                                </div>
-                                <button type="submit" class="search-btn"><BiSearch className='fs-4'></BiSearch> Search</button>
-                            </form>
-                        </div> */}
                     </div>
                     {/* Google Map */}
                     <div className='d-grid col-lg-8 col-sm-12'>

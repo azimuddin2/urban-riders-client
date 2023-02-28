@@ -16,15 +16,15 @@ const Map = () => {
         <div>
             <MapContainer
                 style={{ height: '100vh', width: '100%' }}
-                center={[23.85751150970162, 89.93005409172508]}
+                center={[23.811358633150626, 90.35266412539661]}
                 zoom={13}
             >
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker
-                    position={[23.85751150970162, 89.93005409172508]}
+                <Marker 
+                position={[23.811358633150626, 90.35266412539661]}
                     icon={customIcon}>
                     <Popup>
                         A pretty CSS3 popup. <br /> Easily customizable.

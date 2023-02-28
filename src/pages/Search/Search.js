@@ -50,8 +50,8 @@ const Search = () => {
                     </div>
 
                     {/* Google Map */}
-                    <div className='d-grid col-lg-8 col-sm-12'>
-                        <Map></Map>
+                    <div className='d-grid col-lg-8 col-sm-12 rounded-3'>
+                       <Map></Map>
                     </div>
                 </div>
             </div>
