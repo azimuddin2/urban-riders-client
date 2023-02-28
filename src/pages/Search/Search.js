@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import map from '../../assets/images/Map.png';
+import Map from '../../components/Map/Map';
+import MyGoogleMap from '../../components/MyGoogleMap/MyGoogleMap';
+import './Search.css';
 
 const Search = () => {
     const [destination, setDestination] = useState(false);
-
-    console.log(destination)
     const service = useLoaderData();
     const { name, _id } = service
     const navigate = useNavigate()
@@ -17,7 +18,7 @@ const Search = () => {
         const from = form.from.value;
         const to = form.to.value;
         console.log(from, to)
-    }
+    };
 
     return (
         <section className='form-container'>
@@ -39,19 +40,18 @@ const Search = () => {
                                 </div>
                                 <button onClick={() => setDestination(!destination)} type="submit" class="search-btn"><BiSearch className='fs-4'></BiSearch> Search</button>
                             </form>
-
-                            { destination ?
-                              <button
-                              onClick={() => navigate(`/rider-service/${_id}`)}
-                              type="submit" class="btn btn-dark w-100 mt-4">Destination</button>
-                              : "Destination none"                            
+                            {destination ?
+                                <button
+                                    onClick={() => navigate(`/rider-service/${_id}`)}
+                                    type="submit" class="btn btn-dark w-100 mt-4">Destination</button>
+                                : ""
                             }
-
                         </div>
                     </div>
+
                     {/* Google Map */}
                     <div className='d-grid col-lg-8 col-sm-12'>
-                        <img src={map} alt="" />
+                        <Map></Map>
                     </div>
                 </div>
             </div>
