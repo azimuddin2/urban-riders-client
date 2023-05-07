@@ -4,7 +4,6 @@ import 'leaflet/dist/leaflet.css';
 import { Icon } from 'leaflet';
 import marker from '../../assets/icons/marker-icon.png';
 
-
 const Map = () => {
 
     const customIcon = new Icon({
@@ -15,7 +14,7 @@ const Map = () => {
     return (
         <div>
             <MapContainer
-                style={{ height: '100vh', width: '100%' }}
+                style={{ height: '100vh', width: '100%', borderRadius: '10px' }}
                 center={[23.811358633150626, 90.35266412539661]}
                 zoom={13}
             >
@@ -23,8 +22,8 @@ const Map = () => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker 
-                position={[23.811358633150626, 90.35266412539661]}
+                <Marker
+                    position={[23.811358633150626, 90.35266412539661]}
                     icon={customIcon}>
                     <Popup>
                         A pretty CSS3 popup. <br /> Easily customizable.
