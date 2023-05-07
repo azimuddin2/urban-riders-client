@@ -19,7 +19,7 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader: () => {
-                    return fetch('http://localhost:5000/services')
+                    return fetch('https://urban-riders-server.vercel.app/services')
                 }
             },
             {
@@ -28,14 +28,14 @@ const router = createBrowserRouter([
                     <RiderService></RiderService>
                 </PrivateRoute>,
                 loader: ({ params }) => {
-                    return fetch(`http://localhost:5000/service/${params.id}`)
+                    return fetch(`https://urban-riders-server.vercel.app/service/${params.id}`)
                 }
             },
             {
                 path: '/search/:id',
                 element: <Search></Search>,
                 loader: ({ params }) => {
-                    return fetch(`http://localhost:5000/service/${params.id}`)
+                    return fetch(`https://urban-riders-server.vercel.app/service/${params.id}`)
                 }
             },
             {
