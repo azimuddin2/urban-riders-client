@@ -1,6 +1,9 @@
 .background-section {
     padding-top: 250px;
-    padding-bottom: 350px
+    padding-bottom: 400px;
+    min-height: 100vh;
+    background-position: 100%;
+    background-repeat: no-repeat;
 }
 
 

@@ -18,10 +18,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>,
-                loader: () => {
-                    return fetch('https://urban-riders-server.vercel.app/services')
-                }
+                element: <Home></Home>
             },
             {
                 path: '/rider-service/:id',
