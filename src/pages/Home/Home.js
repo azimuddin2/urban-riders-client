@@ -3,6 +3,8 @@ import Service from '../../components/Service/Service';
 import background from '../../assets/images/Bg.png';
 import './Home.css';
 import { useQuery } from '@tanstack/react-query';
+import Loading from '../Shared/Loading/Loading';
+import ErrorMessage from '../Shared/ErrorMessage/ErrorMessage';
 
 const Home = () => {
 
@@ -15,12 +17,12 @@ const Home = () => {
         }
     })
 
-    if(isLoading){
-         
+    if (isLoading) {
+        return <Loading></Loading>
     }
 
-    if(error){
-
+    if (error) {
+        return <ErrorMessage message={error.message}></ErrorMessage>
     }
 
     return (
