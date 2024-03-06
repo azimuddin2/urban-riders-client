@@ -10,7 +10,6 @@ import Register from "../pages/Login/Register/Register";
 import NotFound from "../pages/Shared/NotFound/NotFound";
 import PrivateRoute from "./PrivateRoute";
 
-
 const router = createBrowserRouter([
     {
         path: '/',

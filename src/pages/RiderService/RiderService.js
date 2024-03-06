@@ -50,7 +50,7 @@ const RiderService = () => {
                                 <button className='click-btn' onClick={handleAddUser}><IoAdd></IoAdd></button>
                             </div>
                         </div>
-                        <button type="submit" class="search-btn mb-5">Pay</button>
+                        <button type="submit" className="search-btn mb-5">Pay</button>
                     </div>
                     {/* Google Map */}
                     <div className='d-grid col-lg-8 col-sm-12'>

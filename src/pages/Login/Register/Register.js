@@ -36,11 +36,11 @@ const Register = () => {
                     <form onSubmit={handleSubmit}>
                         <div className="form-floating mb-3">
                             <input name='name' type="text" className="form-control" id="floatingName" placeholder="Name" required />
-                            <label for="floatingName">Name</label>
+                            <label htmlFor="floatingName">Name</label>
                         </div>
                         <div className="form-floating mb-3">
                             <input name='email' type="email" className="form-control" id="floatingEmail" placeholder="name@example.com" required />
-                            <label for="floatingEmail">Email</label>
+                            <label htmlFor="floatingEmail">Email</label>
                         </div>
                         <div className="form-floating mb-4">
                             <input
@@ -50,7 +50,7 @@ const Register = () => {
                                 placeholder="Password"
                                 required
                             />
-                            <label for="floatingPassword">Password</label>
+                            <label htmlFor="floatingPassword">Password</label>
                             <p
                                 className='show-password'
                                 onClick={() => setShowPassword(!showPassword)}
@@ -65,7 +65,7 @@ const Register = () => {
                         </div>
                         <div className="form-check">
                             <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                            <label className="form-check-label fw-semibold" for="flexCheckDefault">
+                            <label className="form-check-label fw-semibold" htmlFor="flexCheckDefault">
                                 I agree to the <Link className='link'>terms and conditions</Link>
                             </label>
                         </div>

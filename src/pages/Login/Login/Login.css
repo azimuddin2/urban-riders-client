@@ -3,7 +3,7 @@
     padding-bottom: 150px
 }
 
-.form-title{
+.form-title {
     color: #000000;
     font-size: 30px;
     font-weight: 600;
@@ -39,9 +39,10 @@
     color: #FF6E40;
 }
 
-/* input[type=checkbox] {
-    accent-color: #FF6E40;
-} */
+.form-check-input:checked {
+    background-color: #FF6E40 !important;
+    border-color: #FF6E40 !important;
+}
 
 .show-password {
     position: absolute;
@@ -58,13 +59,13 @@
         padding-top: 50px;
         padding-bottom: 50px
     }
-    
+
     .form {
         width: 92%;
         margin: auto;
         padding: 20px 16px;
     }
-    
+
     .show-password {
         position: absolute;
         right: 10px;

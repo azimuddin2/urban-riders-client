@@ -34,10 +34,7 @@ const Header = () => {
                                 <Nav.Link as={Link} to='/contact'>Contact</Nav.Link>
                                 {
                                     user?.uid ?
-                                        <>
-                                            <Nav.Link className='fw-bolder'>{user?.displayName}</Nav.Link>
-                                            <button onClick={handleLogOut} className='fw-semibold login-btn'>Logout</button>
-                                        </>
+                                        <button onClick={handleLogOut} className='fw-semibold login-btn ms-lg-4'>Logout</button>
                                         :
                                         <Nav.Link className='login-btn' as={Link} to='/login'>Login</Nav.Link>
                                 }

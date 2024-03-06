@@ -41,7 +41,7 @@ const Login = () => {
                     <form onSubmit={handleSubmit}>
                         <div className="form-floating mb-3">
                             <input name='email' type="email" className="form-control" id="floatingInput" placeholder="name@example.com" required />
-                            <label for="floatingInput">Email</label>
+                            <label htmlFor="floatingInput">Email</label>
                         </div>
                         <div className="form-floating mb-4">
                             <input
@@ -51,7 +51,7 @@ const Login = () => {
                                 placeholder="Password"
                                 required
                             />
-                            <label for="floatingPassword">Password</label>
+                            <label htmlFor="floatingPassword">Password</label>
                             <p
                                 className='show-password'
                                 onClick={() => setShowPassword(!showPassword)}
@@ -67,10 +67,10 @@ const Login = () => {
                         <div className="form-check">
                             <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                             <div className='d-flex justify-content-between align-items-center'>
-                                <label className="form-check-label fw-semibold" for="flexCheckDefault">
+                                <label className="form-check-label fw-semibold" htmlFor="flexCheckDefault">
                                     Remember Me
                                 </label>
-                                <label className="form-check-label" for="flexCheckDefault">
+                                <label className="form-check-label" htmlFor="flexCheckDefault">
                                     <Link className='forgot-password'> Forgot Password</Link>
                                 </label>
                             </div>

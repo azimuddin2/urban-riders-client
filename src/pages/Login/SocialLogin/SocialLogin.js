@@ -6,9 +6,13 @@ import { Fade } from 'react-reveal';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { toast } from 'react-hot-toast';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SocialLogin = () => {
     const { signInWithGoogle } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const googleProvider = new GoogleAuthProvider();
 
@@ -17,6 +21,7 @@ const SocialLogin = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 toast.error(error.message);

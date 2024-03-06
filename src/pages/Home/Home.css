@@ -18,8 +18,8 @@
 
 /* responsive mobile devices */
 @media screen and (max-width: 576px) {
-   .background-section {
-    padding-top: 20px;
-    padding-bottom: 70px;
-   }
+    .background-section {
+        padding-top: 20px;
+        padding-bottom: 70px;
+    }
 }
