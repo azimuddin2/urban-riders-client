@@ -52,9 +52,8 @@ const RiderService = () => {
                         </div>
                         <button type="submit" className="search-btn mb-5">Pay</button>
                     </div>
-                    {/* Google Map */}
                     <div className='d-grid col-lg-8 col-sm-12'>
-                        <img src={map} alt="Map" className='w-100'/>
+                        <img src={map} alt="Map" className='w-100' />
                     </div>
                 </div>
             </div>
