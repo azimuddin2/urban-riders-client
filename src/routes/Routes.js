@@ -1,14 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../layout/Main/Main";
-import Contact from "../pages/Contact/Contact";
-import Destination from "../pages/Destination/Destination";
+import Main from "../layout/Main";
 import Home from "../pages/Home/Home";
-import Login from "../pages/Login/Login";
-import NotFound from "../pages/NotFound/NotFound";
-import Register from "../pages/Register/Register";
 import RiderService from "../pages/RiderService/RiderService";
 import Search from "../pages/Search/Search";
+import Contact from "../pages/Contact/Contact";
+import Destination from "../pages/Destination/Destination";
+import Login from "../pages/Login/Login/Login";
+import Register from "../pages/Login/Register/Register";
+import NotFound from "../pages/Shared/NotFound/NotFound";
 import PrivateRoute from "./PrivateRoute";
+
 
 const router = createBrowserRouter([
     {

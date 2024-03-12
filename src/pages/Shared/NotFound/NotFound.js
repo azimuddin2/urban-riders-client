@@ -1,6 +1,6 @@
 import React from 'react';
 import './NotFound.css';
-import notFound from '../../assets/images/not-found.gif';
+import notFound from '../../../assets/images/not-found.gif';
 import { FaHome } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { Zoom } from 'react-reveal';

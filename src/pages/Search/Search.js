@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Map from '../../components/Map/Map';
-import MyGoogleMap from '../../components/MyGoogleMap/MyGoogleMap';
 import './Search.css';
 
 const Search = () => {

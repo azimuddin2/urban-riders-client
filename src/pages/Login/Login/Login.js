@@ -3,9 +3,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
 import { Fade } from 'react-reveal';
 import './Login.css';
-import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import { toast } from 'react-hot-toast';
-import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);

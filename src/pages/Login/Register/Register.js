@@ -3,8 +3,8 @@ import { toast } from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Fade } from 'react-reveal';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
-import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
